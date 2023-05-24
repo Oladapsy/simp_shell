@@ -1,8 +1,8 @@
 #include "shell.h"
 
-ssize_t gettheline(char **lineptr, t_size *n, FILE *stream)
+ssize_t gettheline(char **lineptr, size_t *no, FILE *stream)
 void *myreallocate(void *ptr, unsigned int theoldsize, unsigned int thenewsize);
-void theassignlinepointer(char **lineptr, t_size *n, char *buffer, t_size b);
+void theassignlinepointer(char **lineptr, size_t *no, char *buffer, size_t bo);
 
 /**
  * reallocate - This will Reallocates a memory block using the  malloc function and free.
@@ -63,7 +63,7 @@ void *reallocate(void *pointme, unsigned int theoldsize, unsigned int thenewsize
  * @buffer: The string to assign to lineptr.
  * @bo: The size of buffer.
  */
-void lineptrassign(char **_lineptr, t_size *no, char *buffer, t_size bo)
+void lineptrassign(char **_lineptr, size_t *no, char *buffer, size_t bo)
 {
 	if (*_lineptr == NULL)
 	{
